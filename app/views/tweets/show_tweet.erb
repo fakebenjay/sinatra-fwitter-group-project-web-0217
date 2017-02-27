@@ -1,0 +1,7 @@
+<h3><%= @tweet.content %></h3>
+<p>by <%= @tweet.user.username %></p>
+<p><%=@tweet.created_at.month%>/<%=@tweet.created_at.day%> at <%=@tweet.created_at.hour%>:<%=@tweet.created_at.min%></p>
+<p><a id="Edit Tweet" href="/tweets/<%=@tweet.id%>/edit">Edit Me... please</a>
+  <form action="/tweets/<%=@tweet.id%>/delete" method="post">
+    <input type="submit" value="Chop Down This Tree" id="Delete Tweet">
+</form></p>

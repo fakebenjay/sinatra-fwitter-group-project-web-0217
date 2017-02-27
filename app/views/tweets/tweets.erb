@@ -1,0 +1,8 @@
+<h1>Welcome, <%=@user.username%></h1>
+
+<% @tweets.each do |t| %>
+<h3><%= t.content %></h3>
+<p>by <%= t.user.username %></p>
+<p><%=t.created_at.month%>/<%=t.created_at.day%> at <%=t.created_at.hour%>:<%=t.created_at.min%></p>
+<br>-----</br>
+<% end %>
